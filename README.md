@@ -9,3 +9,5 @@ When the program starts, as soon as it detects an object,
 a circle in the upper left corner is activated. 
 When you click on this circle a tab opens containing the name of the object, 
 a description of the object, and a link to the object
+
+Project Counter - This project counts how many vehicles are passing on the highway and classifies the type of vehicle, which can be cars, motorcycles, buses, trucks, etc
