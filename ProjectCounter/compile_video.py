@@ -1,13 +1,16 @@
 ## Se necessário mudar versão do torch e torchvision
 ## torch==2.3.1 torchvision==0.18.1
 
-
+from pathlib import Path
 from ultralytics import YOLO
 from ultralytics.solutions import object_counter
 import cv2
 
-model = YOLO("C:\\Desenvolvimento\\ProjetosEstagio\\ProjetoContagemYOLO\\yolov8x.pt")
-cap = cv2.VideoCapture("C:\\Desenvolvimento\\ProjetosEstagio\\ProjetoContagemYOLO\\test_files\\track_video_car01.mp4")
+ROOT = Path(__file__).parent
+ROOT_FILE = ROOT / "test_files/track_video_car01.mp4"
+
+model = YOLO("yolov8x.pt")
+cap = cv2.VideoCapture(ROOT_FILE)
 
 w, h, fps = (int(cap.get(x)) for x in (cv2.CAP_PROP_FRAME_WIDTH, cv2.CAP_PROP_FRAME_HEIGHT, cv2.CAP_PROP_FPS))
 
