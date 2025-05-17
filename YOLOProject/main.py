@@ -93,7 +93,7 @@ min_popup_height = 0
 animation_speed = 40
 
 # Model
-model = YOLO("YOLOWeights/yolov8n_openvino_model")
+model = YOLO("YOLOWeights/yolov8n.pt")
 
 # Nome das classes do dataset (COCO)
 classNames = coco_classes_pt
